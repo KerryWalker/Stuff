@@ -14,7 +14,7 @@ namespace Stuff
     public class InternalServerErrorWithMessage : ExceptionResult
     {
         /// <summary>
-        /// Creates the Wizard Internal Server Error
+        /// Creates the Internal Server Error Wiht Message Class
         /// </summary>
         /// <param name="ex"></param>
         /// <param name="controller"></param>
