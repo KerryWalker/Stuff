@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Results;
 
-namespace Stuff
+namespace WebAPI
 {
     /// <summary>
     /// An implementation of the default internal server error which also includes the exeption message by default.
