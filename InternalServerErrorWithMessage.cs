@@ -29,11 +29,14 @@ namespace WebAPI
         /// <returns></returns>
         public override Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
         {
-
             HttpError error = new HttpError(Exception, false);
-            error.Add(HttpErrorKeys.ExceptionMessageKey, Exception.Message);
-            if (Request.ShouldIncludeErrorDetail())
+            if (!Request.ShouldIncludeErrorDetail())
             {
+                error.Add(HttpErrorKeys.MessageDetailKey, Exception.Message);
+            }
+            else
+            {
+                error.Add(HttpErrorKeys.ExceptionMessageKey, Exception.Message);
                 error.Add(HttpErrorKeys.ExceptionTypeKey, Exception.GetType().FullName);
                 error.Add(HttpErrorKeys.StackTraceKey, Exception.StackTrace);
                 if (Exception.InnerException != null)
