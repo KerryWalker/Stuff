@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebAPI
+namespace WebAPI.Attributes
 {
 	[AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
 	public sealed class CannotBeEmptyAttribute : RequiredAttribute
