@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Results;
 
-namespace WebAPI
+namespace WebAPI.Results
 {
     /// <summary>
     /// An implementation of the default internal server error which also includes the exeption message by default.
     /// </summary>
-    public class InternalServerErrorWithMessage : ExceptionResult
+    public class InternalServerErrorWithMessageResult : ExceptionResult
     {
         /// <summary>
         /// Creates the Internal Server Error Wiht Message Class
         /// </summary>
         /// <param name="ex"></param>
         /// <param name="controller"></param>
-        public InternalServerErrorWithMessage(Exception ex, ApiController controller) : base(ex, controller)
+        public InternalServerErrorWithMessageResult(Exception ex, ApiController controller) : base(ex, controller)
         {
         }
 
