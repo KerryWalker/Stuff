@@ -4,14 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebAPI
+namespace WebAPI.Attributes
 {
 	public class EmptyOrMinLengthAttribute : MinLengthAttribute
 	{
 		public EmptyOrMinLengthAttribute(int length) : base(length)
 		{
 		}
-
 
 		public override bool IsValid(object value)
 		{
